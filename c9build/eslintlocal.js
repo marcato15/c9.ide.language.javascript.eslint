@@ -26,6 +26,7 @@ define("plugins/c9.ide.language.javascript.eslintlocal/package.c9.ide.language.j
 define("plugins/c9.ide.language.javascript.eslintlocal/eslintlocal",[], function(require, exports, module) {
     main.consumes = ["language","Plugin"];
     main.provides = ["eslintlocal"];
+    console.log("----------------PLUGIN LOADED----------------");
 
     function main(options, imports, register) {
         var Plugin = imports.Plugin;
