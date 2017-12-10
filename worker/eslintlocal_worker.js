@@ -1,8 +1,3 @@
-/**
- * Cloud9 Language Foundation
- *
- * @copyright 2013, Ajax.org B.V.
- */
 define(function(require, exports, module) {
 
     var baseLanguageHandler = require('plugins/c9.ide.language/base_handler');
@@ -16,7 +11,6 @@ define(function(require, exports, module) {
     };
 
     handler.analyze = function(value, ast, options, callback) {
-        console.log("options",options);
         handler.analyzer(value, options.path, function(markers) {
             callback(markers);
         });
@@ -28,10 +22,6 @@ define(function(require, exports, module) {
         var workdir = this.environmentDir;
         var file = this.environmentDir + this.path;
         var nodepath = workdir + "/node_modules/.bin/eslint";
-        console.log("nodepath",nodepath);
-        console.log("file",file);
-        console.log("this",this);
-        console.log("value",value);
 
         workerUtil.execAnalysis(
             nodepath,
@@ -104,7 +94,6 @@ define(function(require, exports, module) {
                     });
                 });
 
-                console.log("markers");
                 callback(markers);
 
             }
