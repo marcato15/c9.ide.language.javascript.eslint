@@ -15,11 +15,11 @@ define(function(require, exports, module) {
 
         plugin.on("load", function () {
             language.unregisterLanguageHandler("plugins/c9.ide.language.javascript.eslint/worker/eslint_worker");
-            language.registerLanguageHandler("plugins/c9.ide.language.javascript.eslint-local/worker/eslintlocal_worker");
+            language.registerLanguageHandler("plugins/c9.ide.language.javascript.eslintlocal/worker/eslintlocal_worker");
         });
 
         plugin.on("unload", function () {
-            language.unregisterLanguageHandler("plugins/c9.ide.language.javascript.eslint-local/worker/eslintlocal_worker");
+            language.unregisterLanguageHandler("plugins/c9.ide.language.javascript.eslintlocal/worker/eslintlocal_worker");
             language.registerLanguageHandler("plugins/c9.ide.language.javascript.eslint/worker/eslint_worker");
         });
 
